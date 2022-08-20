@@ -1,0 +1,15 @@
+@API_URL = http://localhost:3000
+
+GET https://api.openweathermap.org/data/2.5/weather?q=dallas&appid=82198d3cc31ecd48b391a62a7e280daa
+
+###
+GET {{API_URL}}/users
+
+###
+POST {{API_URL}}/users
+Content-Type: application/json
+
+{
+  "username":"harry",
+  "password":"12345",
+}
