@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { GoSearch as Search } from 'react-icons/go';
+import { api_id } from './OpenWeatherMapKey';
 
 const App = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=82198d3cc31ecd48b391a62a7e280daa`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${api_id}`;
 
   const pressEnterHandler = (event) => {
     if (event.key === 'Enter') {
